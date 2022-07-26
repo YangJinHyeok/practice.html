@@ -1,44 +1,29 @@
+*{box-sizing: border-box;}
+html, body{margin: 0; background-color: black;}
+
 .container{
-  width: 640px;
-  margin: 0 auto;
-}
-h1{
-  text-align: center;
-}
-
-.album{
-  width: 640px;
-  height: 400px;
-  overflow: hidden;
-}
-.images{
-  position: relative;
-  display: flex;
-  height: 400px;
-
-  transition: transform 0.5s;
-}
-img{
-  width: 640px; height: 400px;
+  width: 80%; min-width: 320px; max-width: 640px;
+  margin: 10px auto; padding: 5px 0 15px;
+  text-align: center; border: 1px solid white;
+  border-radius: 16px;
 }
 
-button, button:active, button:focus{
-  width: 100px; height: 30px; border: none;
-  color: white; background-color: teal; outline: none;
+h2{ color: white;}
+h1{ color: red;}
+
+h1 > span{
+  display: inline-block;
+  width: 40px;
 }
 
-button:hover{
-  background-color: turquoise;
+button{
+  color: darkslategray; background-color: lightgray;
+  font-size: 16px; padding: 6px;
+  width: 100px; border: none; border-radius: 3px;
+  cursor: pointer;
 }
 
-button:disabled{
-  background-color: gray;
-}
-
-.prev{
-  float: left;
-}
-
-.next{
-  float: right;
+button:active{
+  color: lightgray;
+  background-color: darkslategray;
 }
