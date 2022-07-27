@@ -1,4 +1,11 @@
-*{box-sizing: border-box;}
+@font-face {
+  font-family: 'LAB디지털';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{ font-family: 'LAB디지털'; box-sizing: border-box;}
 html, body{margin: 0; background-color: black;}
 
 .container{
