@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="styles.css" rel="stylesheet">
-  <title>스톱워치</title>
+  <title>무한스크롤 예제</title>
+  <style>
+    html, body{margin: 0;}
+    section .box{
+      height: 500px; background: tomato; color: white;
+      box-sizing: border-box; padding: 30px 10px;
+    }
+    section .box:nth-child(2n) {background: teal;}
+  </style>
 </head>
-
 <body>
-  <div class="container">
-    <h2>스톱워치</h2>
-    <h1>
-      <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="tenMillis">00</span>
-    </h1>
-    <button id="bt__start">START</button>
-    <button id="bt__stop">STOP</button>
-    <button id="bt__reset">RESET</button>
-  </div>
-  <script src="script1.js"></script>
+  <section>
+    <div class="box">1번째 블록</div>
+    <div class="box">2번째 블록</div>
+  </section>
+  <script>
+    var count = 2;
+    window.onscroll = function(){
+      if((window.innerHeight + window.scrollY) >= document.body.offsetHeight){
+        var toAdd = document.createElement("div");
+        toAdd.classList.add("box")
+        toAdd.textContent = `${++count}번째 블록`
+        document.querySelector('section').appendChild(toAdd);
+      }
+    }
+  </script>
 </body>
 </html>
