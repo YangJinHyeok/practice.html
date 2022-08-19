@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blue;
+}
+
+.clock-container {
+  /* 가로 세로를 280px인 정사각형으로 만든다.*/
+  width: 280px;
+  height: 280px;
+
+  /* 테두리를 만들고 반지름이 140px인 원으로 만든다..*/
+  border: 8px solid black;
+  border-radius: 50%;
+
+  /* margin top-bottom을 100px로 주고 가운데 정렬한다. 그리고 margin-bottom을 이용하여
+  밑의 margin을 0px로 설정해준다.*/
+  margin: 60px auto;
+  position: relative;
+  background-color: #f5f5f5;
+}
+
+.clock-container .number {
+  /* number 클래스 CSS*/
+  position: absolute;
+  z-index: 1;
+  font-size: 26px;
+  color: black;
+}
+
+/* 3, 6, 9, 12 숫자 위치 CSS*/
+.clock-container #num3 {
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  right: 2px;
+}
+
+.clock-container #num6 {
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 0;
+}
+
+.clock-container #num9 {
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  left: 2px;
+}
+
+.clock-container #num12 {
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 0;
+}
+
+.clock-container #num1 {
+  top: calc(140px - 120px);
+  right: calc(140px - 80px);
+}
+
+.clock-container #num11 {
+  top: calc(140px - 120px);
+  left: calc(140px - 80px);
+}
+
+.clock-container #num2 {
+  top: calc(140px - 75px);
+  right: calc(140px - 120px);
+}
+
+.clock-container #num10 {
+  top: calc(140px - 75px);
+  left: calc(140px - 120px);
+}
+
+.clock-container #num4 {
+  bottom: calc(140px - 80px);
+  right: calc(140px - 120px);
+}
+
+.clock-container #num8 {
+  bottom: calc(140px - 80px);
+  left: calc(140px - 120px);
+}
+
+.clock-container #num5 {
+  bottom: calc(140px - 120px);
+  right: calc(140px - 80px);
+}
+
+.clock-container #num7 {
+  bottom: calc(140px - 120px);
+  left: calc(140px - 80px);
+}
+
+.clock-container #dot {
+  position: absolute;
+  border: 1px solid black;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  margin: auto;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/*초, 분, 시 바늘 CSS*/
+.clock-container #second {
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background-color: red;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 130px;
+  transform-origin: center bottom;
+}
+
+.clock-container #minute {
+  position: absolute;
+  width: 2px;
+  height: 95px;
+  background-color: black;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 130px;
+  transform-origin: center bottom;
+}
+
+.clock-container #hour {
+  position: absolute;
+  width: 7px;
+  height: 60px;
+  background-color: black;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 130px;
+  transform-origin: center bottom;
+}
+
+.digital-clock {
+  text-align: center;
+  font-size: 20px;
+}
